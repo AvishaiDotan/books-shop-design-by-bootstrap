@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Open+Sans:wght@300&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+body {
+    margin: 0;
+    background-color: #E4E2D6;
+    width: 100%;
+}
+
+.dark-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000083;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+}
+
+.book-input-btns {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    position: relative;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.book-input-btns > * {
+    margin: 5px;
+    font-size: 1.3rem;
+}
+
+.new-book-input {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    height: 50%;
+    background-color: #E4E2D6;
+    border: #000000 10px solid;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    
+    background-image: linear-gradient(45deg, #C0D2C6, #E4E2D6);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}   
+
+header img {
+    max-width: 100px;
+    float: right;
+    margin-inline-end: 20px;
+}
+
+.books-container {
+    position: relative;
+    top: 100px;
+
+    padding: 10px;
+    border: #FCCC82 25px solid;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin: 2px;
+}
+
+.books-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px 40px 40px;
+}
+
+article {
+    border: 2px black solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 8px;
+    max-width: 206px;
+    min-height: 330px;
+    text-align: center;
+}
+
+/* Table Design */
+table.table-layout {
+    border: 1px solid #8E88A0;
+    background-color: #FCCC82;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.table-layout td, table.table-layout th {
+    border: 1px solid #FFB8C8;
+    padding: 3px 2px;
+  }
+  table.table-layout tbody td {
+    font-size: 21px;
+  }
+  table.table-layout tr:nth-child(even) {
+    background: #C0D2C6;
+  }
+  table.table-layout thead {
+    background: #FFB8C8;
+    background: linear-gradient(to bottom, #8E88A0 0%, #8E88A0 66%, #8E88A0 100%);
+    border-bottom: 2px solid #FFB8C8;
+  }
+  table.table-layout thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    border-left: 2px solid #FFB8C8;
+  }
+  table.table-layout thead th:first-child {
+    border-left: none;
+  }
+  
+  table.table-layout tfoot td {
+    font-size: 14px;
+  }
+  table.table-layout tfoot .links {
+    text-align: right;
+  }
+  table.table-layout tfoot .links a{
+    display: inline-block;
+    background: #FFB8C8;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+td {
+    text-align: center;
+}
+ 
+td img {
+    max-width: 100px;
+}
+
+
+/* Modal */
+
+.book-information-modal {
+    position: fixed;
+    top: 0;
+    right: -500px;
+
+    min-width: 500px;
+    height: 100vh;
+    background-color: #FCCC82;
+    box-shadow: -8px 0px 10px -8px #000000;
+}
+
+.book-information-modal h1 {
+    margin-block-start: 140px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.book-data {
+    position: relative;
+    
+    margin-block-start: 20px;
+    left: 50%;
+
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+
+    text-align: justify;
+    padding: 5px;
+    box-shadow: inset 5px 5px 10px -3px #000000;
+    border: 3px #8E88A0 solid;
+}
+
+.abstract {
+    position: relative;
+    
+    
+    margin-block-start: 100px;
+    left: 50%;
+
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+
+    text-align: justify;
+    padding: 5px;
+    box-shadow: inset 5px 5px 10px -3px #000000;
+    border: 3px #8E88A0 solid;
+}
+
+.book-rate {
+    text-align: center;
+    display: block;
+}
+
+.book-rate p {
+    margin: 1px;
+}
+
+.close-modal-btn{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.book-information-modal button {
+    border: 3px #8E88A0 solid;
+}
+
+.misc-btn-container, .filter-btns-container, .sorting-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.view-switch-btn {
+    padding-block-start: 4px;
+}
+
+.view-switch-img {
+    width: 25px;
+}
+
+.add-book-icon {
+    width: 25px;
+    height: 25px;
+    margin-block-start: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+button {
+    border: 3px #000000 solid;
+}
+
+.btn-border {
+    border: 3px #000000 solid;
+}
+
+
+.div-header {
+    font-weight: 700;
+    text-decoration: overline solid;
+    padding: 20px;
+    text-align: center;
+}
+
+.max-price-span {
+    position: absolute;
+    bottom: 28px;
+    left: 38px;
+}
+
+label {
+    position: relative;
+}
+
+.custom-filter {
+    position: relative;
+    bottom: 7px;
+}
+
+.page {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: overline;
+    text-align: center;
+}
+
+.scroll-page-btns {
+    text-align: center;
+}
+
+/* Utils */
+.display-by-slide {
+    right: 0;
+    transition: all 0.5s;
+}
+
+.hide-by-display {
+    display: none;
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

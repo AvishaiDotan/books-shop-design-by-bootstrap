@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="css\main.css">
+</head>
+
+<body onload="onInit()">
+
+    <header>
+        <img src="img/books-icon.png" alt="old books icon">
+    </header>
+    <section class="books-container">
+        <h1>Book Shop</h1>
+        <section class="books-options-container">
+            <div class="sorting-container">
+                <hr />
+                <p class="div-header">Sort</p>
+                <select class="sort-by btn-border" onchange="onSetSortBy()">
+                    <option value="">Sort</option>
+                    <option value="price">By Price</option>
+                    <option value="rating">By Rating</option>
+                    <option value="name">By Name</option>
+                    <option value="id">By ID</option>
+                </select>
+                Descending: 
+                <input class="sort-desc" type="checkbox" onchange="onSetSortBy()" />
+                
+            </div>
+            <div class="filter-btns-container">
+                <hr />
+                <p class="div-header">Filter</p>
+                <label>
+                    <span class="max-price-span">Max Price:</span>
+                    <input type="range" min="50" max="270" value="160" class="filter-price-range btn-border"
+                    onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+                </label>
+                <label>
+                    <span class="max-price-span">Min Rate: </span>
+                    <input type="range" min="0" max="10" value="5" class="filter-rate-range btn-border"
+                    onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+                </label>
+                <input class="custom-filter btn-border" type="text" placeholder="Enter Book Name..." oninput="onSetFilterBy({custom: this.value})">
+            </div>
+            <div class="misc-btn-container">   
+                <hr />
+                <p class="div-header">Misc</p>
+                <button class="view-switch-btn" onclick="onSwitchBooksDisplay()"><img class="view-switch-img" src="img/cards-icon.png"></button>
+                <button class="create-new-book-btn" onclick="onOpenAddBookModal()"><img class="add-book-icon" src="img/add-book-icon.png" alt=""></button>
+            </div> 
+            
+        </section>
+        <section class="books-layout">
+            <!-- <article>
+                <img src="" alt="" srcset="">
+                <p>Name</p>
+                <p>Actrions</p>
+            </article>
+            <table class="table-layout">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Price</td>
+                        <td>Rating</td>
+                        <td>Image url</td>
+                        <td colspan="3">Actions</td>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                </tbody>
+            </table> -->
+        </section>
+        <div class="scroll-page-btns">
+            <!-- TRY TO RENDER -->
+            <p class="page">Page: <span></span></p>
+            <button data-next="" data-operation="prev" onclick="onSetPage(+this.dataset.next)">&lt;&lt;</button>
+            <button data-next="" data-operation="1"  onclick="onSetPage(+this.dataset.next)">1</button>
+            <button data-next="" data-operation="2" onclick="onSetPage(+this.dataset.next)">2</button>
+            <button data-next="" data-operation="3" onclick="onSetPage(+this.dataset.next)">3</button>
+            <button data-next="" data-operation="5" onclick="onSetPage(+this.dataset.next)">...</button>
+            <button data-next="" data-operation="max" onclick="onSetPage(+this.dataset.next)">max</button>
+            <button data-next="" data-operation="next" onclick="onSetPage(+this.dataset.next)">&gt;&gt;</button>
+        </div>
+    </section>
+    <section class="book-information-modal">
+        <h1>Book Abstract</h1>
+        <div class="abstract">
+            <p></p>
+        </div>
+        <P class="book-data id">ID: <span></span></P>
+        <P class="book-data name">Name: <span></span></P>
+        <P class="book-data price">Price: <span></span>$</P>
+        <P class="book-data img-url">Image url: <span></span></P>
+        <label class="book-rate">
+            <p>Rating: </p>
+            <button onclick="onSetRating(-1)">➖</button>
+            <span class="rating"><span></span></span>
+            <button onclick="onSetRating(+1)">➕</button>
+        </label>
+        <div class="close-modal-btn">
+            <button onclick="onCloseBookModal()">Close</button>
+        </div>
+    </section>
+    
+
+    <section class="dark-overlay hide-by-display">
+        <section class="new-book-input">
+            <p class="div-header">New Book Data</p>
+            <form class="book-input-btns" onsubmit="return false">
+                <input class="btn-border" type="text" name="name" placeholder="Enter Book Name..">
+                <input class="btn-border" type="text" name="price" placeholder="Enter Book Price..">
+                <input class="btn-border" type="text" name="rating" placeholder="Enter Book Rating..">
+                <input class="btn-border" type="text" name="imgUrl" placeholder="Enter Image Url..">
+                <button class="add-book-btn" onclick="onAddBook()">Submit</button>
+                <button onclick="onCloseAddBookModal()">Cancel</button>
+            </form>
+
+        </section> 
+    </section>
+
+    <script src="js/services/utils.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book-shop.contoller.js"></script>
+</body>
+
+</html>
