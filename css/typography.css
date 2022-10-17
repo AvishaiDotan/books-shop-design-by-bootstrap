@@ -1,28 +1,28 @@
 @font-face {
     font-family: DancingScript-Bold;
-    src: url(.../fonts/Dancing_Script/static/DancingScript-Bold.ttf);
+    src: url(./.././fonts/Dancing_Script/static/DancingScript-Bold.ttf);
 }
 @font-face {
     font-family: DancingScript-Medium;
-    src: url(.../fonts/Dancing_Script/static/DancingScript-Medium.ttf);
+    src: url(./../fonts/Dancing_Script/static/DancingScript-Medium.ttf);
 }
 @font-face {
     font-family: DancingScript-Regular;
-    src: url(.../fonts/Dancing_Script/static/DancingScript-Regular.ttf);
+    src: url(./../fonts/Dancing_Script/static/DancingScript-Regular.ttf);
 }
 @font-face {
     font-family: DancingScript-SemiBold;
-    src: url(.../fonts/Dancing_Script/static/DancingScript-SemiBold.ttf);
+    src: url(./.././fonts/Dancing_Script/static/DancingScript-SemiBold.ttf);
 }
 @font-face {
     font-family: DancingScript-VariableFont_wght;
-    src: url(.../fonts/Dancing_Script/static/DancingScript-VariableFont_wght.ttf);
+    src: url(./.././fonts/Dancing_Script/static/DancingScript-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: AlfaSlabOne-Regular;
-    src: url(.../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf);
+    src: url(./.././fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf);
 }
 @font-face {
     font-family: Asap-Bold;
-    src: url(.../fonts/Asap/static/Asap-Bold.ttf);
+    src: url(./.././fonts/Asap/static/Asap-Bold.ttf);
 }
