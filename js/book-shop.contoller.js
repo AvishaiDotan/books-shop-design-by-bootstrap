@@ -31,7 +31,6 @@ function renderPaging() {
 }
 
 function renderBooks() {
-    console.log(gLang);
     const books = getBooks()
     const view = getViewPref()
 
@@ -260,10 +259,10 @@ function onSetPage(page) {
 
 function onSetLang(lang) {
     setLang(lang)
-    doTrans()
     setDisplayDirection()
     updateWindowPath()
     renderBooks()
+    doTrans()
 }
 
 function onSetView(prefView) {
