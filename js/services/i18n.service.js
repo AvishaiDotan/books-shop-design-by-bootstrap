@@ -269,8 +269,17 @@ function setDisplayDirection() {
     document.querySelector('html').dir = dir
     document.querySelector('html').lang = lang
 
+
     if (gLang !== ENGLISH) {
         document.querySelectorAll('.custom-text-align').forEach(el => el.classList.add('custom-text-align-right'))
+        document.querySelectorAll('.align').forEach(el => el.classList.add('right'))
+        document.querySelector('.l-page').classList.remove('left-pagination')
+        document.querySelector('.r-page').classList.remove('right-pagination')
+    } else {
+        document.querySelectorAll('.custom-text-align').forEach(el => el.classList.remove('custom-text-align-right'))
+        document.querySelectorAll('.align').forEach(el => el.classList.remove('right'))
+        document.querySelector('.l-page').classList.add('right-pagination')
+        document.querySelector('.r-page').classList.add('left-pagination')
     }
 }
 

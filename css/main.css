@@ -76,6 +76,33 @@ body {
     text-align: right;
 }
 
+.btn-group, .navigation  {
+    direction: ltr !important; 
+}
+
+.right {
+    left: '';
+    right: 0;
+}
+
+.right-pagination {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--bs-pagination-border-radius);
+    border-bottom-right-radius: var(--bs-pagination-border-radius);
+}
+
+.left-pagination {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--bs-pagination-border-radius);
+    border-bottom-left-radius: var(--bs-pagination-border-radius);
+}
+
+
+
+
+
 @media screen and (max-width: 1000px) {
     .col-img, .col-rate {
         display: none;

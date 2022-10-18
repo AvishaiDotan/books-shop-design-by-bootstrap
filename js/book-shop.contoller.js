@@ -20,11 +20,11 @@ function renderPaging() {
     const currPage = getPagingData().currPage
 
     const strHTML = `
-        <li class="page-item"><a class="page-link" data-trans="previous" href="#" ${isValidPage(currPage - 1) ? `onclick="onSetPage(${currPage - 1})"` : ''}>Previous</a></li>
+        <li class="page-item"><a class="page-link l-page" data-trans="previous" href="#" ${isValidPage(currPage - 1) ? `onclick="onSetPage(${currPage - 1})"` : ''}>${_getTrans('previous')}</a></li>
         <li class="page-item"><a class="page-link" href="#" ${isValidPage(currPage) ? `onclick="onSetPage(${currPage})"` : ''}>${currPage + 1}</a></li>
         <li class="page-item"><a class="page-link" href="#" ${isValidPage(currPage + 1) ? `onclick="onSetPage(${currPage + 1})"` : ''}>${currPage + 2}</a></li>
         <li class="page-item"><a class="page-link" href="#" ${isValidPage(currPage + 2) ? `onclick="onSetPage(${currPage + 2})"` : ''}>${currPage + 3}</a></li>
-        <li class="page-item"><a class="page-link" data-trans="next" href="#" ${isValidPage(currPage + 1) ? `onclick="onSetPage(${currPage + 1})"` : ''}>Next</a></li>
+        <li class="page-item"><a class="page-link r-page" data-trans="next" href="#" ${isValidPage(currPage + 1) ? `onclick="onSetPage(${currPage + 1})"` : ''}>${_getTrans('next')}</a></li>
     `
 
     document.querySelector('.pagination').innerHTML = strHTML
@@ -57,9 +57,10 @@ function renderBooks() {
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-secondary" data-toggle="modal"
-                        data-bs-toggle="modal" data-bs-target="#updatePriceModal" data-trans="update-action">Update</button>
-                        <button type="button" class="btn btn-secondary" data-trans="delete-action" onclick="onRemoveBook('${book.id}')">Remove</button>
-                        <button type="button" class="btn btn-secondary" data-trans="read-action" onclick="onSetBookToUpdate('${book.id}'); onOpenUpdateRatingModal('${book.id}')" data-bs-toggle="modal" data-bs-target="#openBookModal">Display</button>
+                        data-bs-toggle="modal" data-bs-target="#updatePriceModal" data-trans="update-action">${_getTrans('update-action')}</button>
+                        <button type="button" class="btn btn-secondary" data-trans="delete-action" onclick="onRemoveBook('${book.id}')">${_getTrans('delete-action')}</button>
+                        <button type="button" class="btn btn-secondary" data-trans="read-action" onclick="onSetBookToUpdate('${book.id}'); onOpenUpdateRatingModal('${book.id}')" 
+                        data-bs-toggle="modal" data-bs-target="#openBookModal">${_getTrans('read-action')}</button>
                     </div>
                 </td>
             </tr>`)
@@ -89,9 +90,10 @@ function renderBooks() {
                                     <p class="card-text">${book.name}</p>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-primary" data-toggle="modal" onclick="onSetBookToUpdate('${book.id}')"
-                                        data-bs-toggle="modal" data-bs-target="#updatePriceModal" data-trans="update-action">Update</button>
-                                        <button type="button" class="btn btn-primary" data-trans="delete-action" onclick="onRemoveBook('${book.id}')">Remove</button>
-                                        <button type="button" class="btn btn-primary" data-trans="read-action" onclick="onSetBookToUpdate('${book.id}'); onOpenUpdateRatingModal('${book.id}')" data-bs-toggle="modal" data-bs-target="#openBookModal">Display</button>
+                                        data-bs-toggle="modal" data-bs-target="#updatePriceModal" data-trans="update-action">${_getTrans('update-action')}</button>
+                                        <button type="button" class="btn btn-primary" data-trans="delete-action" onclick="onRemoveBook('${book.id}')">${_getTrans('delete-action')}</button>
+                                        <button type="button" class="btn btn-primary" data-trans="read-action" onclick="onSetBookToUpdate('${book.id}'); onOpenUpdateRatingModal('${book.id}')" 
+                                        data-bs-toggle="modal" data-bs-target="#openBookModal">${_getTrans('read-action')}</button>
                                 </div>
                                 </div>
                             </div>`)
