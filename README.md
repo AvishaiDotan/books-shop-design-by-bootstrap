@@ -13,7 +13,7 @@ Welcome to the **Bookshop Management System**! With this application, you can si
 - Reverse the order of the book list
 - Pagination for easy navigation through large lists of books
 - i18n support for use in English and Hebrew
-- 
+
 ![3-devices-black (2)](https://user-images.githubusercontent.com/108017307/211192648-2cde107f-45c7-4080-af31-706a2204f9a4.png)
 
 <a href="https://avishaidotan.github.io/books-shop-design-by-bootstrap/">Link To The Project<a/>
